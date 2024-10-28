@@ -1,0 +1,46 @@
+Na série The Big Bang Theory, os amigos Sheldon, Leonard, Raj e Howard vivem em constante aprendizado e, de certa forma, disputa por saber quem é o mais inteligente. Penny, a vizinha deles, não aguenta mais essas discussões onde ela não entende nada e por isso decidiu fazer uma prova para definir qual o melhor entre eles.
+
+
+
+Nessa prova, os cientistas precisam memorizar os caminhos que seguiram em um mapa. Por ser muito difícil de calcular tudo na hora, pediram a sua ajuda para programar um código e ajudá-los a ganhar a competição.
+
+No começo de tudo, cada cientista já escolhe um local do mapa (representado por um número) no qual deseja chegar e seu trabalho é fazer com que o código informe ao gênio da vez quão longe está desse local desejado.
+
+Input
+
+A primeira entrada corresponde ao número do local do mapa que se deseja chegar (o ponto de partida é sempre considerado zero):
+
+X
+
+Em seguida, o programa receberá um número indefinido de inteiros positivos que correspondem ao progresso do participante na prova, indicando sua posição atual no mapa, sempre terminando com um número negativo (o número negativo não deve ser considerado no calculo do progresso):
+
+W
+Y
+Z
+...
+
+Para cada entrada, deve-se somar ao progresso os valores de 1 até o inteiro da entrada (incluso). Por exemplo, se o inteiro for 5, você deve somar 1+2+3+4+5 à pontuação que indica a posição atual do participante.
+
+Output
+
+Ao final das entradas, uma das 5 possíveis saídas deve ser imprimida.
+
+Se o número do local atual for menor que o da desejada:
+
+Ainda falta um pouco...
+
+No caso do número atual ser igual ao do objetivo:
+
+Parabéns!!! Você é o mais inteligente
+
+O número atual sendo maior que o objetivo mas menor que 20 vezes ele:
+
+Parece que o gêniozinho passou um pouco do local...
+
+Se estiver de 20 à 100 vezes (incluindo 100) maior que a do objetivo:
+
+Acho que sua grande inteligência fez você se perder um pouco no caminho, onde estamos?
+
+Por fim, se o número atual for maior que 100 vezes a desejada:
+
+Hum... acho que o gêniozinho não tem mesmo doutorado ein...

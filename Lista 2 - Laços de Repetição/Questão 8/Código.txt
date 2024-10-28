@@ -1,0 +1,82 @@
+qtd_instrucoes = input()
+qtd = int(qtd_instrucoes, 2)
+parou = 0
+beleza = 0
+vida_et = 0
+agua = 0
+temp = 0
+qtd_luas = 0
+qtd_planetas = 0
+buraco_super = 0
+massa = 0
+spin = 0
+carga = 0
+tipo_carga = 'Carga negativa'
+
+while qtd > 0:
+    tipo = input()
+    if tipo == '0101':
+        parou = 0
+        while not parou:
+            conteudo = input()
+            if conteudo == 'Beleza':
+                beleza = int(input())
+            elif conteudo == 'Possibilidade de vida extraterrestre':
+                vida_et = int(input())
+            elif conteudo == 'Agua aparente':
+                agua = int(input())
+            elif conteudo == 'Temperatura adequada':
+                temp = int(input())
+            elif conteudo == 'Quantidade de luas':
+                qtd_luas = input()
+                qtd_luas = int(qtd_luas, 2)
+            elif conteudo == 'End':
+                if agua == 1 and temp == 1 and beleza == 1 and vida_et == 1:
+                    print(f'Achamos o planeta ideal e ainda tem {qtd_luas} lua(s)!')
+                    print('Parece bom demais pra ser verdade, que tipo de vida sera que nos aguarda?')
+                elif agua == 1 and temp == 1 and beleza == 1 and vida_et == 0:
+                    print('Ainda nao sabemos se o planeta e habitavel, parece nao haver vida')
+                elif agua == 1 and temp == 1 and beleza == 0 and vida_et == 1:
+                    print(f'O planeta e possivelmente habitavel porem olha essa aparencia, mesmo que tenha {qtd_luas} lua(s) vamos omitir esse do relatorio!')
+                else:
+                    print('Vish! Esse nao satisfaz nem as condicoes basicas, nao perderemos tempo')
+                parou = 1
+                beleza = 0
+                vida_et = 0
+                agua = 0
+                temp = 0
+                qtd_luas = 0
+    if tipo == '1101':
+        qtd_planetas = input()
+        qtd_planetas = int(qtd_planetas, 2)
+        buraco_super = int(input())
+        if buraco_super == 1:
+            print(f'Ha um buraco negro supermassivo nesta galaxia, demais! Alem da existencia de cerca de {qtd_planetas} milhoes de planetas')
+        else:
+            print(f'Aparentemente nao ha nenhum buraco negro supermassivo no centro dessa galaxia, jurava que todas tinham! Nao importa, ainda temos {qtd_planetas} milhoes de planetas para observar algum deve apresentar possiblidade de vida')
+        
+    if tipo == '0000':
+        massa = input()
+        if massa == '0101':
+          massa = 5
+        elif massa == '1010':
+          massa = 10
+        else:
+          massa = 15
+            
+        spin = int(input())
+        carga = input()
+        print('Conseguimos todas informacoes necessarias para classificar este buraco negro no nosso banco de dados!')
+        print('De acordo com as analises, o buraco negro:')
+        print(f'- Tem massa de aproximadamente {massa} milhoes massas solares')
+        print(f'- Possui em media {spin} rotacao(oes) por segundo')
+        if carga == '0000':
+            tipo_carga = 'Carga neutra'
+            print('- Apresenta carga inexistente ou nula')
+        elif carga == '0001':
+            tipo_carga = 'Carga positiva'
+            print('- Apresenta carga positiva')
+        else:
+            tipo_carga = 'Carga negativa'
+            print('- Apresenta carga negativa')
+    qtd = qtd - 1

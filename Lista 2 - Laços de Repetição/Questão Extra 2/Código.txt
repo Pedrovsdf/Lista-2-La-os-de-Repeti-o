@@ -1,0 +1,56 @@
+import math
+N = int(input())
+if N <= 0:
+    print('Isso está quebrado, acho que Howard pode me ajudar.')
+elif (N < 3 and N > 0):
+    print('Acho que bebi demais, eu juro que tinha mais estrelas!')
+else:
+    soma_primo = 0
+    check_primo = 1
+    cont_sequencia = 0
+    x1 = int(input())
+    y1 = int(input())
+    x2 = int(input())
+    y2 = int(input())
+
+    for i in range(N - 1):
+        distancia = int(math.sqrt(math.pow((x1 - x2), 2) + math.pow((y1 - y2), 2)))
+        print(f'Distância [star{i+1} <-> star{i+2}]: {distancia}')
+
+        n1 = 0
+        n2 = 1
+        cont = 0
+        while cont <= distancia+1:
+            n = n1 + n2
+            n1 = n2
+            n2 = n
+            if n1 == distancia:
+                cont_sequencia = cont_sequencia + 1
+                cont = distancia + 2
+            cont = cont + 1
+
+        x1 = x2
+        y1 = y2
+        if i+1 == N - 1:
+            pass
+        else:
+            x2 = int(input())
+            y2 = int(input())
+
+        soma_primo = soma_primo + distancia
+
+
+    for i in range(2, soma_primo):
+        if soma_primo % i == 0:
+            check_primo = 0
+
+    if cont_sequencia == N - 1 and check_primo == 0:
+        print('Yes! Eu consegui!')
+    elif cont_sequencia == N - 1 and check_primo == 1:
+        print('Oh my god! Eu vou ganhar o Nobel primeiro que Sheldon!')
+    elif cont_sequencia == N - 2:
+        print('Oh, não! Eu quase consegui!')
+    elif cont_sequencia < N - 2 and check_primo == 0:
+        print('Eu vou acabar como o Stuart :/')
+    elif cont_sequencia < N - 2 and check_primo == 1:
+        print('Pelo menos o programa está funcionando...')

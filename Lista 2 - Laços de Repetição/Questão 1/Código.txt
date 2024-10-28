@@ -1,0 +1,30 @@
+N = int(input())
+pontuacao_sheldon = 0
+pontuacao_raj = 0
+
+while N:
+    escolha_sheldon = input()
+    escolha_raj = input()
+
+    if (escolha_sheldon == 'lagarto' and escolha_raj == 'spock'):
+        pontuacao_sheldon = pontuacao_sheldon + 1
+    elif (escolha_sheldon == 'spock' and escolha_raj == 'lagarto'):
+        pontuacao_raj = pontuacao_raj + 1
+    elif (escolha_sheldon == 'spock' and escolha_raj == 'tesoura'):
+        pontuacao_sheldon = pontuacao_sheldon + 1
+    elif (escolha_sheldon == 'tesoura' and escolha_raj == 'spock'):
+        pontuacao_raj = pontuacao_raj + 1
+    elif (escolha_sheldon == 'tesoura' and escolha_raj == 'lagarto'):
+        pontuacao_sheldon = pontuacao_sheldon + 1
+    elif (escolha_sheldon == 'lagarto' and escolha_raj == 'tesoura'):
+        pontuacao_raj = pontuacao_raj + 1
+    else:
+        N = N
+    N = N - 1
+
+if pontuacao_sheldon > pontuacao_raj:
+    print('BAZINGA! EU SOU O SENHOR DA SALA!')
+elif pontuacao_sheldon < pontuacao_raj:
+    print('ENGOLE ESSA, SHELDON!')
+else:
+    print('Oh não, precisamos de outra rodada.')

@@ -1,0 +1,74 @@
+N = 1
+fase = 0
+while N:
+    verificar = input()
+
+    if verificar == 'É o fim da Estrada pra Sheldon Cooper':
+        if fase == 0:
+            print('Que potencial desperdiçado...')
+            N = 0
+        elif fase == 1 or fase == 2:
+            print('Tão perto, mas tão longe')
+            N = 0
+        elif fase == 3:
+            print('Não desista Sheldon, você ainda têm muito para alcançar!')
+            N = 0
+        else:
+            print('Nãoooooo, esse momento ia ser seu Sheldon')
+            N = 0
+    elif verificar == 'Tinha que ser o engenheiro sem Phd do Wolowitz' or verificar == 'Leonard seu anão covarde' or verificar == 'Tu é muito burro Raj':
+            print('Não xingue seus amigos Sheldon!')
+
+    if fase == 0:
+        if verificar == 'Começou a Trabalhar na Caltech':
+            fase = fase + 1
+            primeira_vez = 1
+        else:
+            primeira_vez = 0
+    elif fase == 1:
+        if verificar == 'Trabalho sobre a String Theory':
+            fase = fase + 1
+            primeira_vez = 1
+        elif verificar == 'Bazinga' and primeira_vez == 1:
+            fase = fase - 1
+            primeira_vez = 0
+        else:
+            primeira_vez = 0
+    elif fase == 2:
+        if verificar == 'Ganhar o Chancellor de ciência':
+            fase = fase + 1
+            primeira_vez = 1
+        elif verificar == 'Bazinga' and primeira_vez == 1:
+            fase = fase - 1
+            primeira_vez = 0
+        else:
+            primeira_vez = 0
+    elif fase == 3:
+        if verificar == 'Pensar na Teoria de Cooper-Hofstader':
+            fase = fase + 1
+            primeira_vez = 1
+        elif verificar == 'Bazinga' and primeira_vez == 1:
+            fase = fase - 1
+            primeira_vez = 0
+        else:
+            primeira_vez = 0
+    elif fase == 4:
+        if verificar == 'Criou a Super Assimetria':
+            fase = fase + 1
+            primeira_vez = 1
+        elif verificar == 'Bazinga' and primeira_vez == 1:
+            fase = fase - 1
+            primeira_vez = 0
+        else:
+            primeira_vez = 0
+    elif fase == 5:
+        if verificar == 'Ganhar o Nobel':
+            fase = fase + 1
+            primeira_vez = 1
+            N = 0
+            print('Você conseguiu Sheldon, o Nobel é seu!!!')
+        elif verificar == 'Bazinga' and primeira_vez == 1:
+            fase = fase - 1
+            primeira_vez = 0
+        else:
+            primeira_vez = 0

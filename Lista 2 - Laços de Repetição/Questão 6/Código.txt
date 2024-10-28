@@ -1,0 +1,25 @@
+parou = 0
+
+while not parou:
+    for i in range(3):
+        batida = input()
+        if batida == 'toc-toc-toc':
+            nome = input()
+            if nome == 'Penny':
+                print(i + 1)
+            elif nome == 'Boa noite':
+                print('Boa noite Penny')
+                parou = 1
+                break
+            else:
+                print('Não pode entrar, se identifique!!!')
+                break
+        elif batida == 'Boa noite':
+            print('Boa noite Penny')
+            parou = 1
+            break
+        else:
+            print('Não pode entrar, se identifique!!!')
+            break
+        if i == 2:
+            print('Pode entrar Sheldon')

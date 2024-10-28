@@ -1,0 +1,57 @@
+CERN Portal To Another Dimension ou Large Hadron Collider Interdimensional Gateway refere-se a uma teoria da conspiração amplamente divulgada em 2022 de que o CERN, um laboratório de astrofísica europeu, produziria um portal para outra dimensão como resultado de experimentos com o Large Hadron Collider (LHC).
+
+Untitled
+
+Sabendo da reativação desse acelerador de partículas e temendo suas alterações no tempo e espaço, Sheldon decide fazer as malas. Por isso, conhecendo suas habilidades de programação, ele resolve contratá-lo para criar um programa que decidirá em qual planeta ele deverá se abrigar.
+
+Você deve analisar o índice de habitabilidade dos planetas, indicando para Sheldon o mais adequado para sua mudança.
+
+O índice de habitabilidade é calculado da seguinte maneira:
+
+Untitled
+
+Quanto mais próximo de 1, mais habitável é o planeta.
+
+Input
+
+A primeira entrada indicará o número de planetas a serem comparados, você deve aguardar por um número inteiro válido, ou seja, que indique ao menos 2 planetas para serem comparados. Caso o número seja inválido, o programa deverá informar o usuário com a mensagem:
+
+Número inválido, tente novamente
+
+O programa deve então receber mais números até que se receba um número válido.
+
+n_invalido
+
+n_invalido
+
+...
+
+n_invalido
+
+n_valido
+
+Em seguida, você receberá n informações de planetas, cada uma contendo uma string com o nome do planeta, um float r > 0 com o raio em Rearth, um float m > 0 com a massa em Mearth e um inteiro k > 0 com a temperatura em Kelvin para cada planeta.
+
+Output
+
+A saída consiste em uma das seguintes mensagens, contendo o planeta com o índice mais próximo de 1.
+
+Caso esse índice seja igual a 1, deverá ser printado:
+
+{nome} é perfeito!
+
+Se esse índice for menor que 1, deverá ser printado:
+
+{nome} vai dar pro gasto
+
+Caso o índice ultrapasse 1, deverá ser printado:
+
+{nome} vai ter que servir
+
+Dica:
+
+Você pode usar a função “abs()” que retorna o módulo ou valor absoluto de um número. Por exemplo:
+
+abs(3) = 3
+
+abs(-3) = 3

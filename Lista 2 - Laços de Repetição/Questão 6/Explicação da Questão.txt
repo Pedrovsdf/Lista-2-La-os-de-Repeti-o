@@ -1,0 +1,49 @@
+Penny, desde que virou vizinha de Sheldon, atendeu tanto a porta para ele, que já perdeu a paciência. Por isso, pediu que você crie um porteiro eletrônico que identifique o Sheldon e deixe ele entrar. Depois de tanto tempo, Penny já identificou que Sheldon sempre bate na porta da mesma forma. Bate 3 vezes e chama Penny 3 vezes seguidas.
+
+sheldon batendo
+
+O seu algoritmo irá receber o input com o ‘toc-toc-toc’ 3 vezes, e outro input com o nome ‘Penny’ 3 vezes. A cada vez que receber um input de cada, o algoritmo deverá imprimir uma contagem. Se realmente for Sheldon, imprime uma mensagem.
+
+💡 OBS: É obrigatório usar os laços ‘for’ e ‘while’ pelo menos uma vez cada.
+
+Input
+
+O input possui uma quantidade indeterminada de linhas de entrada, mas sempre termina com a mensagem "Boa noite", quando o programa deve encerrar. As batidas do Sheldon sempre seguem o padrão "toc-toc-toc" seguido de "Penny", repetido três vezes, se esse padrão for interrompido então sabemos que não é o Sheldon e então a contagem deve recomeçar.
+
+Exemplo do padrão de Sheldon:
+
+toc-toc-toc
+
+Penny
+
+toc-toc-toc
+
+Penny
+
+toc-toc-toc
+
+Penny
+
+Boa noite
+
+Output
+
+Toda vez que o código receber um ‘toc-toc-toc’ e um ‘Penny’, deverá imprimir a contagem, começando em 1:
+
+1
+
+2
+
+3
+
+Se a contagem chegar em 3, será o Sheldon, e deverá imprimir:
+
+Pode entrar Sheldon
+
+Se receber algum input que fora do padrão do Sheldon, interrompe a contagem e imprime:
+
+Não pode entrar, se identifique!!!
+
+Quando receber o Boa noite:
+
+Boa noite Penny

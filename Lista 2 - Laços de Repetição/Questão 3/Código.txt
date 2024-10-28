@@ -1,0 +1,26 @@
+X = int(input())
+
+posicao = 0
+check_posicao = 0
+
+while check_posicao >= 0:
+    check_posicao = int(input())
+
+    if check_posicao > 0:
+        check_posicao2 = check_posicao
+        while check_posicao2 >= 0:
+            posicao += check_posicao2
+            check_posicao2 = check_posicao2 - 1
+    else:
+        break
+
+if posicao < X:
+    print('Ainda falta um pouco...')
+elif posicao == X:
+    print('Parabéns!!! Você é o mais inteligente')
+elif posicao > X and posicao < (20*X):
+    print('Parece que o gêniozinho passou um pouco do local...')
+elif posicao > (20*X) and posicao < (100*X):
+    print('Acho que sua grande inteligência fez você se perder um pouco no caminho, onde estamos?')
+else:
+    print('Hum... acho que o gêniozinho não tem mesmo doutorado ein...')

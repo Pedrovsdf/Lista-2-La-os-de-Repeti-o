@@ -1,0 +1,23 @@
+parou = 0
+qtd_piadas = 0
+qtd_boas = 0
+
+while not parou:
+    piada = input()
+    
+    if piada == 'Fim do Show!':
+        parou = 1
+    else:
+      reacao = input()
+      if reacao == 'BAZINGA!':
+        qtd_piadas = qtd_piadas + 1
+        qtd_boas = qtd_boas + 1
+      else:
+        qtd_piadas = qtd_piadas + 1
+
+if qtd_boas > (qtd_piadas*60)/100:
+    print('BAZINGA! O senso de humor dele é muito bom, Amy, parece com o meu!')
+elif qtd_boas < (qtd_piadas*40)/100:
+    print('Amy, acredito que acabei de perder 60 de QI ouvindo essas piadas!')
+else:
+    print('Esse stand up foi bastante mediano, Amy. Parece a carreira do Leonard!')

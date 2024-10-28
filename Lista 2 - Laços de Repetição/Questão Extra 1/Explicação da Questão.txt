@@ -1,0 +1,46 @@
+Além de um ótimo Físico Teórico, Sheldon possui grande facilidade em realizar grandes contas matemáticas, com isso, Howard propôs um desafio para o gênio, se ele conseguiria converter números de binário para decimal ou de decimal para binário corretamente, pois a medida que os números vão ficando maiores, mais difícil é realizar essa conversão. Dessa forma, a fim de verificar se os cálculos de Sheldon estão corretos, ele pede para você construir um programa que recebe um número (Em binário ou Decimal) e a resposta do Sheldon para aquela conversão, a fim de verificar se a predição está correta ou errada. Por fim, ele ainda exige que durante a execução do programa, a cada resposta errada do Sheldon seja mostrada a conversão correta e ao final das entradas informar se ele acertou mais de 50% das predições ao final dos cálculos.
+
+Sheldon
+
+Input
+
+Será 1 entrada principal:
+
+Um inteiro “n” informando quantos números serão convertidos
+
+Após isso teremos n entradas com as seguintes informações
+
+Uma string informando a operação (Conversão) a ser realizada
+
+DEC : Binário → Decimal
+
+BIN : Decimal → Binário
+
+Uma entrada informando o valor a ser convertido (Sempre realize as operações a partir desse número)
+
+Uma entrada informando o palpite do jogador acerca da conversão
+
+OBS: Quando a entrada for um valor em binário, trabalhe com o valor no formato de string
+
+OBS2 : Zeros a esquerda serão desconsiderados
+
+OBS3 : Todas as entradas serão amigáveis (Não precisa se preocupar com números negativos)
+
+Output
+
+Output
+Para os casos em que um palpite estiver errado
+
+Palpite Incorreto, o valor {numero} = {resultado_correto}
+
+Ao final do programa, caso a quantidade de acertos seja maior que 50%
+
+Bazinga! Quem realizou esses cálculos foi o computador??
+
+Caso, a quantidade de acertos seja menor
+
+Parece que realizar conversões em binário não é o seu forte
+
+OBS: É proibido o uso de qualquer função que realize a conversão de binário para decimal ou de decimal para binário
+
+OBS2 : É proibído o uso de Listas

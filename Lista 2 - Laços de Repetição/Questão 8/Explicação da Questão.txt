@@ -1,0 +1,142 @@
+Sheldon Cooper tinha hobbys estranhos e, próximo a um dos eventos mais esperados por ele e seus amigos, o grande Dr.Cooper decidiu fazer um contrato que obrigava os quatro amigos a irem sempre juntos à Comic-con (um evento muito prestigiado pela comunidade geek). Uma das cláusulas do contrato contrato dizia: “Ao assinar esse contrato, Howard Wolowitz, Leonard Hofstadter, Rajesh Koothrappali e Sheldon Cooper se comprometem também a irem com diferentes fantasias a cada edição do evento Comic-Con”. Como os 4 amigos amam o evento, todos assinaram. Próximo de acontecer mais uma edição do Comic-Con, todos estavam ansiosos e pensativos sobre qual fantasia iriam usar. Então, Leonard deu a ideia de irem homenageando uma coisa que todos eles amavam: Startrek! Fizeram as fantasias, ensaiaram falas e tudo estava bonito, mas Howard, o Engenheiro do grupo, propôs algo ousado: “E se nós construíssemos um robô capaz de analisar as condições dos elementos do espaço? Iríamos conquistar todas as gatinhas!”. Os outros amaram e ideia e falaram que enquanto Howard construiria o hardware do robô, eles iriam criando o Software. Sua missão é ajudar nessa aventura, eles precisam de você para construir esse Software!
+
+img
+
+Input
+
+A primeira entrada é a quantidade de instruções que será enviada em uma string binária com 4 bits.
+
+0001 (1) ≤ qnt_instrucoes ≤ 0100 (4)
+
+Em seguida, será recebido o tipo de corpo que esta sendo observado, pode haver três tipos de entrada:
+
+0101 → planeta
+
+1101 → galáxia
+
+0000 → buraco negro supermassivo
+
+Se a instrução seja indicando um planeta:
+O programa reconhece qual será o conteúdo e será recebida uma descrição seguido de um valor, podendo ser:
+
+“Beleza”
+
+0 ou 1
+
+“Possibilidade de vida extraterrestre”
+
+0 ou 1
+
+“Agua aparente”
+
+0 ou 1
+
+"Temperatura adequada"
+
+0 ou 1
+
+"Quantidade de luas"
+
+0001 (1) ≤ qnt_luas ≤ 0011 (3)
+
+End
+
+1 → afirmação
+
+0 → negação
+
+OBS: O programa irá receber diversas dessas características até que seja encerrado com o “End”
+
+OBS2: Caso qualquer uma das descrições não for informada pelo programa, ela deve ser considerada como 0
+
+Se for indicando uma galáxia:
+Sempre terá duas entradas:
+
+qnt_planetas_em_milhoes
+
+A quantidade de planetas em cada galáxia está restrita a três quantias:
+01100100 ⇒ 100 em decimal
+11001000 ⇒ 200 em decimal
+100101100 ⇒ 300 em decimal
+buraco_super
+
+Podendo ter dois valores:
+0 ⇒ indicando que não há buraco negro supermassivo nessa galáxia
+1 ⇒ indicando que há
+Se for indicando um buraco negro:
+Sempre terá três entradas:
+
+massa em bilhões de massas solares
+
+Na analise foi observado três valores significantes que se repetem:
+0101 ⇒ 5 em binário
+1010 ⇒ 10 em binário
+1111 ⇒ 15 em binário
+spin (rotação)
+
+0 ou 1
+carga
+
+Pode haver três tipos:
+0000 ⇒ Carga neutra
+0001 ⇒ Carga positiva
+e se não for nenhuma das anteriores ⇒ Carga negativa
+Output
+
+Caso a instrução seja indicando um planeta:
+
+Se apresentar agua aparente, tempetatura adequada, beleza e vida extraterrestre:
+
+"Achamos o planeta ideal e ainda tem {qnt_lua} lua(s)!"
+
+"Parece bom demais pra ser verdade, que tipo de vida sera que nos aguarda?"
+
+Se apresentar agua aparente, tempetatura adequada, beleza e não haver vida extraterrestre:
+
+"Ainda nao sabemos se o planeta e habitavel, parece nao haver vida"
+
+Se apresentar agua aparente, tempetatura adequada, vida extraterrestre, mas não for bonito:
+
+"O planeta e possivelmente habitavel porem olha essa aparencia, mesmo que tenha {qnt_lua} lua(s) vamos omitir esse do relatorio!"
+
+Caso não seja incluído em nenhuma das sentenças anteriores:
+
+"Vish! Esse nao satisfaz nem as condicoes basicas, nao perderemos tempo"
+
+Caso seja indicando uma galáxia:
+
+Se tiver buraco negro supermassivo:
+
+"Ha um buraco negro supermassivo nesta galaxia, demais! Alem da existencia de cerca de {qnt_planetas} milhoes de planetas"
+
+Se não tiver:
+
+"Aparentemente nao ha nenhum buraco negro supermassivo no centro dessa galaxia, jurava que todas tinham! Nao importa, ainda temos {qnt_planetas} milhoes de planetas para observar algum deve apresentar possiblidade de vida"
+
+Caso seja indicando um buraco negro supermassivo:
+
+"Conseguimos todas informacoes necessarias para classificar este buraco negro no nosso banco de dados!"
+
+"De acordo com as analises, o buraco negro:"
+
+"- Tem massa de aproximadamente {massa} milhoes massas solares"
+
+"- Possui em media {rotacao} rotacao(oes) por segundo"
+
+"- {carga}"
+
+{carga} →
+
+Caso a carga seja nula:
+
+"Apresenta carga inexistente ou nula"
+
+Caso a carga seja positiva:
+
+"Apresenta carga positiva"
+
+Caso a carga seja negativa:
+
+"Apresenta carga negativa"
+
+OBS: todas as saídas de valores quantitativos devem ser em decimal

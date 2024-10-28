@@ -1,0 +1,43 @@
+N = int(input())
+acertou = 0
+qtd_0 = 0
+
+for i in range(N):
+    operacao = input()
+    valor = int(input())
+    if valor == 0:
+        qtd_0 += 1
+    palpite = input()
+
+    if operacao == 'DEC' and valor != 0:
+        palpite = int(palpite)
+        valor2 = valor
+        decimal = 0
+        j = 0
+        n = 0
+        while (valor2 != 0):
+            dec = valor2 % 10
+            decimal = decimal + dec * pow(2, j)
+            valor2 = valor2 // 10
+            j += 1
+        if palpite != decimal:
+            print(f'Palpite Incorreto, o valor {valor} = {decimal}')
+        else:
+            acertou = acertou + 1
+    elif operacao == 'BIN' and valor != 0:
+        b = ''
+        decimal = 0
+        valor2 = valor
+        while valor2 != 0:
+            b += str(valor2 % 2)
+            valor2 = int(valor2 / 2)
+        decimal = b[::-1]
+        if palpite != decimal:
+            print(f'Palpite Incorreto, o valor {valor} = {decimal}')
+        else:
+            acertou = acertou + 1
+
+if acertou > (((N-qtd_0)*50)/100):
+    print('Bazinga! Quem realizou esses cálculos foi o computador??')
+else:
+    print('Parece que realizar conversões em binário não é o seu forte')

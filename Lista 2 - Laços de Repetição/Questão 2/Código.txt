@@ -1,0 +1,32 @@
+temp = 30
+fome = 1
+internet = 0
+parou = 1
+
+while parou:
+    acao = input()
+
+    if acao == 'ir para o grad':
+        temp = temp - 5
+        internet = internet + 300
+    elif acao == 'sair para a rua':
+        temp = temp + 5
+    elif acao == 'comer uma quentinha':
+        fome = 0
+    elif acao == 'conectar no wifi':
+        internet = internet + 100
+    elif acao == 'parar':
+        parou = 0
+    else:
+        print('Entrada inválida')
+
+if temp >= 30:
+    print('A temperatura aqui não está agradável')
+else:
+    print('Agora sim, está aconchegante')
+if fome:
+    print('Meu corpo precisa de comida')
+if internet < 100:
+    print('Essa conexão está horrível')
+if not fome and temp <= 25 and internet >= 300:
+    print('Finalmente um lugar preciso para mim!')
