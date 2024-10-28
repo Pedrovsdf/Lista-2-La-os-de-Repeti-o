@@ -1,2 +1,1 @@
-# Lista-2-La-os-de-Repeti-o
-Questões de Laços de Repetição
+As questões vão escalonando, então as com numerações mais altas são mais difíceis.
